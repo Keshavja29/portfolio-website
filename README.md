@@ -1,4 +1,4 @@
-# 🎨 Keshav Jat - Portfolio Website
+# 🎨 Keshav - Portfolio Website
 
 A modern, responsive portfolio website showcasing my projects, skills, and experience as a Full Stack Developer.
 
@@ -200,4 +200,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-**Made with ❤️ by Keshav Jat**
+**Made with ❤️ by Keshav**
