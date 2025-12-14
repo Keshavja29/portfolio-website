@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,6 +39,11 @@ const Navbar = () => {
           <Link to="contact" smooth duration={500} className="nav-link nav-link-cta" onClick={() => setMenuOpen(false)}>
             Contact
           </Link>
+          
+          {/* Dark Mode Toggle */}
+          <button className="theme-toggle" onClick={toggleDarkMode} aria-label="Toggle dark mode">
+            {darkMode ? <FaSun className="theme-icon" /> : <FaMoon className="theme-icon" />}
+          </button>
         </div>
 
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
