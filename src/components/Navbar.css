@@ -16,6 +16,11 @@
   padding: 15px 0;
 }
 
+body.dark-mode .navbar.scrolled {
+  background: rgba(45, 55, 72, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,6 +34,7 @@
   font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .logo-text {
@@ -40,6 +46,12 @@
 
 .logo-dot {
   color: var(--primary-color);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .nav-menu {
@@ -54,6 +66,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  font-size: 1rem;
 }
 
 .nav-link::after {
@@ -71,9 +84,13 @@
   width: 100%;
 }
 
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
 .nav-link-cta {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: white !important;
   padding: 10px 25px;
   border-radius: 25px;
   transition: all 0.3s ease;
@@ -86,6 +103,46 @@
 .nav-link-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  background: var(--bg-light);
+  border: 2px solid var(--primary-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.theme-toggle:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.theme-toggle:hover .theme-icon {
+  color: white;
+}
+
+.theme-icon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  animation: spin 0.5s ease;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .hamburger {
@@ -109,7 +166,7 @@
     top: 70px;
     right: -100%;
     flex-direction: column;
-    background: white;
+    background: var(--card-bg);
     width: 100%;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -128,5 +185,10 @@
     width: 100%;
     text-align: center;
     padding: 15px 0;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
