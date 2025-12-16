@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Jadam - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f1e8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2d5016 0%, #1a3010 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 40px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            font-weight: 900;
+            color: #f5f1e8;
+            letter-spacing: -5px;
+            line-height: 0.9;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        
+        .hero-subtitle {
+            font-size: 3rem;
+            color: #fbbf24;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            color: #f5f1e8;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border: 2px solid #fbbf24;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #fbbf24;
+            color: #1a3010;
+            transform: translateY(-3px);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fbbf24;
+            color: #1a3010;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        .star {
+            position: absolute;
+            color: #fbbf24;
+            font-size: 2rem;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* About Section */
+        .about-section {
+            background: #f5f1e8;
+            padding: 100px 20px;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            background: #1a3010;
+            color: #f5f1e8;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .badge {
+            background: #fbbf24;
+            color: #1a3010;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        /* Education Section */
+        .education-section {
+            background: #2d5016;
+            padding: 100px 20px;
+            color: #f5f1e8;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: #fbbf24;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        
+        .education-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .year {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fbbf24;
+            min-width: 150px;
+        }
+        
+        .edu-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .edu-content p {
+            color: #d1d5db;
+            font-size: 1.1rem;
+        }
+        
+        /* Experience Section */
+        .experience-section {
+            background: #fbbf24;
+            padding: 100px 20px;
+            color: #1a3010;
+        }
+        
+        .experience-section .section-title {
+            color: #1a3010;
+        }
+        
+        .exp-item {
+            background: #1a3010;
+            color: #f5f1e8;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .exp-item h3 {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        
+        .exp-item .year {
+            color: #fbbf24;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .exp-item p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background: #fbbf24;
+            color: #1a3010;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            background: #f5f1e8;
+            padding: 100px 20px;
+        }
+        
+        .skills-section .section-title {
+            color: #1a3010;
+            font-size: 4.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .skill-category h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1a3010;
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-badge {
+            background: #1a3010;
+            color: #fbbf24;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            background: #1a3010;
+            padding: 100px 20px;
+            color: #f5f1e8;
+        }
+        
+        .projects-section .section-title {
+            color: #fbbf24;
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .project-card {
+            background: #2d5016;
+            padding: 40px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+            border: 3px solid transparent;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #fbbf24;
+        }
+        
+        .project-card h3 {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            background: #fbbf24;
+            color: #1a3010;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .project-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.4);
+        }
+        
+        /* Languages Section */
+        .languages-section {
+            background: #fbbf24;
+            padding: 80px 20px;
+        }
+        
+        .languages-section .section-title {
+            color: #1a3010;
+            text-align: center;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .language-card {
+            background: #1a3010;
+            color: #f5f1e8;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .language-card h3 {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        
+        .language-card p {
+            color: #d1d5db;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a3010;
+            color: #f5f1e8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        footer h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #fbbf24;
+            margin-bottom: 30px;
+        }
+        
+        footer p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fbbf24;
+            color: #1a3010;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-text h2 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="star" style="top: 10%; left: 10%;">✦</div>
+        <div class="star" style="top: 20%; right: 15%;">✦</div>
+        <div class="star" style="bottom: 30%; left: 20%;">✦</div>
+        <div class="star" style="bottom: 15%; right: 25%;">✦</div>
+        
+        <div class="hero-content">
+            <h1>PORTFOLIO</h1>
+            <div class="hero-subtitle">FOLIO</div>
+            <div class="social-links">
+                <a href="https://github.com/Keshavja29" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/keshav-jadam" target="_blank">LinkedIn</a>
+                <a href="mailto:keshavja29@gmail.com">Email</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" onclick="document.querySelector('.about-section').scrollIntoView({behavior: 'smooth'})">
+            Scroll down ↓
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Hello,<br>I'm Keshav!</h2>
+                    <p>I am a passionate Full Stack Developer and BCA student at Vivekananda Global University, Jaipur. With expertise in React, Python, Java, and modern web technologies, I create innovative solutions that blend functionality with elegant design.</p>
+                    <p>Currently exploring AI integration in web applications and building projects that solve real-world problems.</p>
+                    <div class="badge">Expected Graduation: 2026</div>
+                    <div class="badge">Location: Ajmer, Rajasthan</div>
+                </div>
+                
+                <div>
+                    <div class="contact-info">
+                        <h3>Contact</h3>
+                        <div class="contact-item">
+                            📍 Ghughara Ghati, Jaipur Road, Ajmer, Rajasthan
+                        </div>
+                        <div class="contact-item">
+                            📧 keshavja29@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            📱 8005853391
+                        </div>
+                        <div class="contact-item">
+                            💼 <a href="https://linkedin.com/in/keshav-jadam" style="color: #fbbf24; text-decoration: none;">LinkedIn Profile</a>
+                        </div>
+                        <div class="contact-item">
+                            💻 <a href="https://github.com/Keshavja29" style="color: #fbbf24; text-decoration: none;">GitHub Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="year">✦ 2023-2026</div>
+                <div class="edu-content">
+                    <h3>Vivekananda Global University, Jaipur</h3>
+                    <p>Bachelor of Computer Applications (BCA)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="exp-item">
+                <div class="year">✦ 2024</div>
+                <h3>Full Stack Developer Projects</h3>
+                <p>Developed 8+ production-ready applications using MERN stack, Python Django, and Java Spring Boot. Implemented AI features including sentiment analysis, data cleaning, and smart recommendations.</p>
+                <div class="tags">
+                    <span class="tag">#FullStack</span>
+                    <span class="tag">#React</span>
+                    <span class="tag">#Python</span>
+                    <span class="tag">#Java</span>
+                    <span class="tag">#AI</span>
+                </div>
+            </div>
+            
+            <div class="exp-item">
+                <div class="year">✦ 2024</div>
+                <h3>Open Source Contributor</h3>
+                <p>Active contributor on GitHub with multiple projects showcasing modern web development practices, clean code architecture, and comprehensive documentation.</p>
+                <div class="tags">
+                    <span class="tag">#OpenSource</span>
+                    <span class="tag">#GitHub</span>
+                    <span class="tag">#Collaboration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">Responsive Design</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express.js</span>
+                        <span class="skill-badge">Django</span>
+                        <span class="skill-badge">Spring Boot</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">REST APIs</span>
+                        <span class="skill-badge">JWT</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>AI & Data</h3>
+                    <div class="skill-items">
+                        <span class="skill-badge">AI Prompting</span>
+                        <span class="skill-badge">Data Visualization</span>
+                        <span class="skill-badge">Pandas</span>
+                        <span class="skill-badge">NLP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">PROJECTS</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Social Media Analytics Dashboard</h3>
+                    <p>Real-time analytics platform with AI sentiment analysis, trending hashtags, and engagement metrics. Built with React and Python Flask.</p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/Keshavja29/social-media-analytics-dashboard" class="project-link" target="_blank">View Project →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Smart Data Management System</h3>
+                    <p>Enterprise data management with AI duplicate detection, data cleaning, and advanced search. Java Spring Boot + React.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">React</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/Keshavja29/smart-data-management-system" class="project-link" target="_blank">View Project →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Data Visualization Dashboard</h3>
+                    <p>Interactive dashboard for CSV/Excel analysis with multiple chart types and statistical analysis. Live on Streamlit!</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Plotly</span>
+                    </div>
+                    <br><br>
+                    <a href="https://data-visualization-dashboard-cnfb.streamlit.app/" class="project-link" target="_blank">Live Demo →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Task Management System</h3>
+                    <p>Full-stack task manager with user authentication, CRUD operations, priority levels, and dashboard analytics.</p>
+                    <div class="tags">
+                        <span class="tag">MERN</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/Keshavja29/task-management-system" class="project-link" target="_blank">View Project →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather app with 7-day forecast, city search, geolocation, and interactive weather maps.</p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/Keshavja29/weather-dashboard-react" class="project-link" target="_blank">View Project →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Real-time Chat with AI</h3>
+                    <p>WebSocket messaging with AI spam detection, smart replies, and content moderation features.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/Keshavja29/realtime-chat-smart-features" class="project-link" target="_blank">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            
+            <div class="languages-grid">
+                <div class="language-card">
+                    <h3>English</h3>
+                    <p>Fluent</p>
+                </div>
+                
+                <div class="language-card">
+                    <h3>Hindi</h3>
+                    <p>Native</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer>
+        <div class="container">
+            <h2>Let's Work Together!</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <a href="mailto:keshavja29@gmail.com" class="cta-button">Get in Touch!</a>
+            <br><br>
+            <p style="margin-top: 40px; color: #d1d5db;">Made with ❤️ by Keshav Jadam</p>
+        </div>
+    </footer>
+</body>
+</html>
