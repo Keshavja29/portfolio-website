@@ -46,7 +46,7 @@
   animation: fadeInUp 1s ease;
 }
 
-/* Profile Photo with Coffee Glow */
+/* Profile Photo with Coffee Glow - ENHANCED VISIBILITY */
 .profile-photo {
   width: 250px;
   height: 250px;
@@ -54,6 +54,7 @@
   margin: 0 auto 30px;
   position: relative;
   animation: float 6s ease-in-out infinite;
+  z-index: 10;
 }
 
 .profile-photo img {
@@ -61,12 +62,15 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   border: 5px solid var(--primary-dark);
   box-shadow: 
     0 0 40px var(--glow-coffee),
     0 0 80px var(--glow-coffee),
     inset 0 0 20px rgba(86, 28, 36, 0.3);
   transition: all 0.3s ease;
+  display: block;
+  background: var(--card-bg);
 }
 
 .profile-photo::before {
