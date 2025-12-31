@@ -6,6 +6,11 @@ A modern, responsive portfolio website showcasing my projects, skills, and exper
 
 **Coming Soon!** Will be deployed on Vercel.
 
+## 🔗 Other Live Projects
+
+- **🌤️ Weather Dashboard:** [https://weather-dashboard-react-git-main-keshavs-projects-ff4dde9b.vercel.app](https://weather-dashboard-react-git-main-keshavs-projects-ff4dde9b.vercel.app)
+- **📊 Data Visualization Dashboard:** [https://data-visualization-dashboard-cnfb.streamlit.app](https://data-visualization-dashboard-cnfb.streamlit.app)
+
 ## ✨ Features
 
 ### 🎯 Core Features
@@ -180,12 +185,12 @@ All 6 projects with:
 - Beautiful hover effects
 
 **Featured Projects:**
-1. Weather Dashboard (React) - **LIVE**
-2. Task Management System (MERN)
-3. Expense Tracker (MERN)
-4. E-Commerce API (Django)
-5. Job Portal (Spring Boot)
-6. Data Visualization (Python/Streamlit)
+1. Weather Dashboard (React) - **[LIVE](https://weather-dashboard-react-git-main-keshavs-projects-ff4dde9b.vercel.app)**
+2. Data Visualization Dashboard (Python/Streamlit) - **[LIVE](https://data-visualization-dashboard-cnfb.streamlit.app)**
+3. Task Management System (MERN)
+4. Expense Tracker (MERN)
+5. E-Commerce API (Django)
+6. Job Portal (Spring Boot)
 
 ### 5. Contact Section
 - Contact form
@@ -254,10 +259,8 @@ Edit `src/components/Projects.js` and add to the `projects` array.
 - [ ] Testimonials section
 - [ ] Resume download
 - [ ] Project filters
-- [ ] More animation effects
+- [ ] Animation improvements
 - [ ] SEO optimization
-- [ ] Performance optimization
-- [ ] Accessibility improvements
 
 ## 📄 License
 
