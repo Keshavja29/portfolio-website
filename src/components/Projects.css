@@ -8,7 +8,7 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -40,7 +40,7 @@
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transform-style: preserve-3d;
   cursor: pointer;
-  border: 2px solid rgba(255, 107, 53, 0.1);
+  border: 2px solid rgba(86, 28, 36, 0.3);
 }
 
 .project-card::before {
@@ -51,9 +51,9 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    rgba(255, 107, 53, 0.1) 0%, 
-    rgba(255, 140, 66, 0.1) 50%,
-    rgba(255, 165, 0, 0.1) 100%);
+    rgba(86, 28, 36, 0.2) 0%, 
+    rgba(109, 41, 50, 0.2) 50%,
+    rgba(199, 183, 163, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
@@ -62,9 +62,9 @@
 .project-card:hover {
   transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
   box-shadow: 
-    0 30px 60px rgba(255, 107, 53, 0.3),
-    0 0 40px rgba(255, 107, 53, 0.2);
-  border-color: var(--primary-orange);
+    0 30px 60px rgba(86, 28, 36, 0.4),
+    0 0 40px rgba(86, 28, 36, 0.3);
+  border-color: var(--primary-dark);
 }
 
 .project-card:hover::before {
@@ -95,14 +95,14 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
-  color: white;
+  background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+  color: var(--accent-cream);
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
   z-index: 2;
-  box-shadow: 0 5px 15px var(--glow-orange);
+  box-shadow: 0 5px 15px var(--glow-coffee);
   animation: pulse 2s infinite;
 }
 
@@ -122,12 +122,12 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--text-primary);
+  color: var(--accent-cream);
   transition: color 0.3s ease;
 }
 
 .project-card:hover .project-content h3 {
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
 }
 
 .project-description {
@@ -147,18 +147,18 @@
 
 .tech-badge {
   padding: 6px 14px;
-  background: rgba(255, 107, 53, 0.1);
-  border: 1px solid var(--primary-orange);
+  background: rgba(86, 28, 36, 0.3);
+  border: 1px solid var(--primary-dark);
   border-radius: 20px;
   font-size: 0.85rem;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .tech-badge:hover {
-  background: var(--primary-orange);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--accent-cream);
   transform: translateY(-2px);
 }
 
@@ -183,25 +183,26 @@
 }
 
 .project-link.primary {
-  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
-  color: white;
-  box-shadow: 0 5px 15px var(--glow-orange);
+  background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+  color: var(--accent-cream);
+  box-shadow: 0 5px 15px var(--glow-coffee);
 }
 
 .project-link.primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--glow-orange);
+  box-shadow: 0 8px 25px var(--glow-coffee);
+  background: linear-gradient(135deg, var(--secondary-dark), var(--tertiary-light));
 }
 
 .project-link.secondary {
   background: transparent;
-  color: var(--primary-orange);
-  border: 2px solid var(--primary-orange);
+  color: var(--tertiary-light);
+  border: 2px solid var(--primary-dark);
 }
 
 .project-link.secondary:hover {
-  background: var(--primary-orange);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--accent-cream);
 }
 
 /* Responsive */
