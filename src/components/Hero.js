@@ -6,49 +6,62 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <div className="hero-text">
-          <h3 className="hero-greeting fade-in">Hi, I'm</h3>
-          <h1 className="hero-name fade-in-up">Keshav Jadam</h1>
-          <h2 className="hero-title fade-in-up">
-            <span className="typing-text">Full Stack Developer</span>
-          </h2>
-          <p className="hero-description fade-in-up">
-            I build scalable web applications and turn data into insights. 
-            Passionate about creating beautiful, functional solutions with modern technologies.
-          </p>
-          
-          <div className="hero-buttons fade-in-up">
-            <a href="#projects" className="btn btn-primary">View Projects</a>
-            <a href="#contact" className="btn btn-secondary">Contact Me</a>
-          </div>
-
-          <div className="hero-social fade-in">
-            <a href="https://github.com/Keshavja29" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/keshavjat" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaLinkedin />
-            </a>
-            <a href="mailto:keshavja29@gmail.com" className="social-link">
-              <FaEnvelope />
-            </a>
-          </div>
+        <div className="profile-photo">
+          <img 
+            src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1851ee77-0b86-4c6d-9cee-914056ecdef1/2025-12-31T05-07-02-187Z-a898cac7-chat-image-1767157622167-1.jpg" 
+            alt="Keshav Jadam" 
+          />
         </div>
-
-        <div className="hero-image fade-in">
-          <div className="image-placeholder">
-            <div className="code-animation">
-              <span>{'<'}</span>
-              <span>{'code'}</span>
-              <span>{'>'}</span>
-            </div>
-          </div>
+        
+        <div className="greeting">Hello, I'm</div>
+        
+        <h1>
+          <span className="name">Keshav Jadam</span>
+        </h1>
+        
+        <p className="hero-title">Full Stack Developer & Data Analytics Expert</p>
+        
+        <p className="hero-description">
+          Passionate about building scalable web applications and transforming data into actionable insights. 
+          Specialized in MERN stack, Python, and modern web technologies. 
+          I turn complex problems into elegant solutions.
+        </p>
+        
+        <div className="hero-buttons">
+          <a href="#projects" className="btn-primary">View My Work</a>
+          <a href="#contact" className="btn-secondary">Get In Touch</a>
+        </div>
+        
+        <div className="social-links">
+          <a 
+            href="https://github.com/Keshavja29" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a 
+            href="https://linkedin.com/in/keshavjat" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a 
+            href="mailto:keshavja29@gmail.com" 
+            className="social-link"
+            aria-label="Email"
+          >
+            <FaEnvelope />
+          </a>
         </div>
       </div>
-
-      <div className="scroll-indicator">
-        <div className="mouse"></div>
-      </div>
+      
+      <div className="scroll-indicator"></div>
     </section>
   );
 };
