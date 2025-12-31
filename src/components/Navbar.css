@@ -3,17 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(26, 10, 14, 0.95);
   backdrop-filter: blur(20px);
   padding: 20px 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+  border-bottom: 1px solid rgba(86, 28, 36, 0.3);
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
   padding: 15px 0;
-  box-shadow: 0 5px 30px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 5px 30px rgba(86, 28, 36, 0.3);
 }
 
 .nav-container {
@@ -28,7 +28,7 @@
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,12 +62,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange));
+  background: linear-gradient(90deg, var(--primary-dark), var(--tertiary-light));
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
 }
 
 .nav-link:hover::after {
@@ -75,7 +75,7 @@
 }
 
 .nav-link.active {
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
 }
 
 .nav-link.active::after {
@@ -85,7 +85,7 @@
 .mobile-menu-icon {
   display: none;
   font-size: 1.8rem;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   cursor: pointer;
 }
 
@@ -96,13 +96,13 @@
     top: 70px;
     left: -100%;
     flex-direction: column;
-    background: rgba(10, 10, 10, 0.98);
+    background: rgba(26, 10, 14, 0.98);
     backdrop-filter: blur(20px);
     width: 100%;
     padding: 40px 20px;
     gap: 30px;
     transition: left 0.3s ease;
-    border-top: 1px solid rgba(255, 107, 53, 0.1);
+    border-top: 1px solid rgba(86, 28, 36, 0.3);
   }
   
   .nav-menu.active {
