@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Hero.css';
 
@@ -8,54 +9,38 @@ const Hero = () => {
       <div className="hero-content">
         <div className="profile-photo">
           <img 
-            src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1851ee77-0b86-4c6d-9cee-914056ecdef1/2025-12-31T05-07-02-187Z-a898cac7-chat-image-1767157622167-1.jpg" 
+            src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1851ee77-0b86-4c6d-9cee-914056ecdef1/2025-12-31T05-21-59-264Z-4926ed9d-chat-image-1767158519245-0.jpg" 
             alt="Keshav Jadam" 
           />
         </div>
         
-        <div className="greeting">Hello, I'm</div>
-        
+        <p className="greeting">Hello, I'm</p>
         <h1>
           <span className="name">Keshav Jadam</span>
         </h1>
-        
-        <p className="hero-title">Full Stack Developer & Data Analytics Expert</p>
-        
+        <p className="hero-title">Full Stack Developer & Data Analyst</p>
         <p className="hero-description">
           Passionate about building scalable web applications and transforming data into actionable insights. 
-          Specialized in MERN stack, Python, and modern web technologies. 
-          I turn complex problems into elegant solutions.
+          Specialized in MERN stack, Python, and modern web technologies.
         </p>
         
         <div className="hero-buttons">
-          <a href="#projects" className="btn-primary">View My Work</a>
-          <a href="#contact" className="btn-secondary">Get In Touch</a>
+          <Link to="projects" smooth duration={500} className="btn-primary">
+            View My Work
+          </Link>
+          <Link to="contact" smooth duration={500} className="btn-secondary">
+            Get In Touch
+          </Link>
         </div>
         
         <div className="social-links">
-          <a 
-            href="https://github.com/Keshavja29" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="social-link"
-            aria-label="GitHub"
-          >
+          <a href="https://github.com/Keshavja29" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaGithub />
           </a>
-          <a 
-            href="https://linkedin.com/in/keshavjat" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="social-link"
-            aria-label="LinkedIn"
-          >
+          <a href="https://linkedin.com/in/keshavjat" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaLinkedin />
           </a>
-          <a 
-            href="mailto:keshavja29@gmail.com" 
-            className="social-link"
-            aria-label="Email"
-          >
+          <a href="mailto:keshavja29@gmail.com" className="social-link">
             <FaEnvelope />
           </a>
         </div>
