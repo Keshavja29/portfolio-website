@@ -1,7 +1,7 @@
 .footer {
   background: var(--card-bg);
   padding: 40px 0 20px;
-  border-top: 1px solid rgba(255, 107, 53, 0.1);
+  border-top: 1px solid rgba(86, 28, 36, 0.3);
 }
 
 .footer-content {
@@ -14,7 +14,7 @@
 .footer-logo {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -32,21 +32,22 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: rgba(255, 107, 53, 0.1);
-  border: 2px solid var(--primary-orange);
+  background: rgba(86, 28, 36, 0.3);
+  border: 2px solid var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   font-size: 1.3rem;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .footer-social-link:hover {
-  background: var(--primary-orange);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--accent-cream);
   transform: translateY(-5px) rotate(360deg);
+  border-color: var(--tertiary-light);
 }
 
 .footer-text {
@@ -56,19 +57,20 @@
 }
 
 .footer-text a {
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   text-decoration: none;
   font-weight: 600;
 }
 
 .footer-text a:hover {
   text-decoration: underline;
+  color: var(--accent-cream);
 }
 
 .footer-copyright {
   color: var(--text-secondary);
   font-size: 0.9rem;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 107, 53, 0.1);
+  border-top: 1px solid rgba(86, 28, 36, 0.3);
   margin-top: 20px;
 }
