@@ -8,13 +8,45 @@
   overflow: hidden;
 }
 
+/* Background Image with Your Photo */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1851ee77-0b86-4c6d-9cee-914056ecdef1/2025-12-31T05-07-02-187Z-a898cac7-chat-image-1767157622167-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+  filter: blur(3px);
+}
+
+/* Coffee Gradient Overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 50%, rgba(86, 28, 36, 0.8) 0%, transparent 70%),
+    radial-gradient(circle at 70% 80%, rgba(109, 41, 50, 0.6) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(26, 10, 14, 0.7) 0%, rgba(26, 10, 14, 0.9) 100%);
+  z-index: 1;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
   animation: fadeInUp 1s ease;
 }
 
-/* Profile Photo with Orange Glow */
+/* Profile Photo with Coffee Glow */
 .profile-photo {
   width: 250px;
   height: 250px;
@@ -29,11 +61,11 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--primary-orange);
+  border: 5px solid var(--primary-dark);
   box-shadow: 
-    0 0 40px var(--glow-orange),
-    0 0 80px var(--glow-orange),
-    inset 0 0 20px rgba(255, 107, 53, 0.2);
+    0 0 40px var(--glow-coffee),
+    0 0 80px var(--glow-coffee),
+    inset 0 0 20px rgba(86, 28, 36, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -45,9 +77,9 @@
   right: -10px;
   bottom: -10px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange), var(--accent-orange));
+  background: linear-gradient(45deg, var(--primary-dark), var(--secondary-dark), var(--tertiary-light));
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.6;
   filter: blur(20px);
   animation: rotate 10s linear infinite;
 }
@@ -65,14 +97,15 @@
 .profile-photo:hover img {
   transform: scale(1.05);
   box-shadow: 
-    0 0 60px var(--glow-orange),
-    0 0 100px var(--glow-orange);
+    0 0 60px var(--glow-coffee),
+    0 0 100px var(--glow-coffee);
+  border-color: var(--tertiary-light);
 }
 
 /* Greeting */
 .greeting {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: var(--tertiary-light);
   margin-bottom: 10px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -89,16 +122,17 @@
 
 .hero h1 .name {
   display: block;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 30px rgba(199, 183, 163, 0.3);
 }
 
 /* Title */
 .hero-title {
   font-size: 1.8rem;
-  color: var(--text-secondary);
+  color: var(--tertiary-light);
   margin-bottom: 25px;
   font-weight: 400;
 }
@@ -125,19 +159,20 @@
   display: inline-block;
   padding: 12px 30px;
   background: transparent;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid var(--primary-orange);
+  border: 2px solid var(--primary-dark);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-orange);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--accent-cream);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px var(--glow-orange);
+  box-shadow: 0 8px 30px var(--glow-coffee);
+  border-color: var(--tertiary-light);
 }
 
 /* Social Links */
@@ -152,22 +187,23 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(255, 107, 53, 0.1);
-  border: 2px solid var(--primary-orange);
+  background: rgba(86, 28, 36, 0.3);
+  border: 2px solid var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   font-size: 1.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-link:hover {
-  background: var(--primary-orange);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--accent-cream);
   transform: translateY(-5px) rotate(360deg);
-  box-shadow: 0 10px 30px var(--glow-orange);
+  box-shadow: 0 10px 30px var(--glow-coffee);
+  border-color: var(--tertiary-light);
 }
 
 /* Scroll Indicator */
@@ -177,12 +213,13 @@
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
+  z-index: 2;
 }
 
 .scroll-indicator::before {
   content: '↓';
   font-size: 2rem;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
 }
 
 @keyframes bounce {
