@@ -7,10 +7,13 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
+        {/* Profile Photo */}
         <div className="profile-photo">
           <img 
             src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/1851ee77-0b86-4c6d-9cee-914056ecdef1/2025-12-31T05-21-59-264Z-4926ed9d-chat-image-1767158519245-0.jpg" 
-            alt="Keshav Jadam" 
+            alt="Keshav Jadam - Full Stack Developer" 
+            loading="eager"
+            crossOrigin="anonymous"
           />
         </div>
         
