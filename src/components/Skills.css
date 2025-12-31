@@ -8,7 +8,7 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,19 +31,19 @@
   background: var(--card-bg);
   padding: 30px;
   border-radius: 20px;
-  border: 2px solid rgba(255, 107, 53, 0.1);
+  border: 2px solid rgba(86, 28, 36, 0.3);
   transition: all 0.3s ease;
 }
 
 .skill-category:hover {
-  border-color: var(--primary-orange);
+  border-color: var(--primary-dark);
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 15px 40px rgba(86, 28, 36, 0.3);
 }
 
 .skill-category h3 {
   font-size: 1.5rem;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   margin-bottom: 25px;
   display: flex;
   align-items: center;
@@ -52,6 +52,7 @@
 
 .skill-category h3 svg {
   font-size: 1.8rem;
+  color: var(--primary-dark);
 }
 
 .skill-item {
@@ -62,18 +63,18 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  color: var(--text-primary);
+  color: var(--accent-cream);
   font-weight: 500;
 }
 
 .skill-percentage {
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   font-weight: 600;
 }
 
 .skill-bar {
   height: 10px;
-  background: rgba(255, 107, 53, 0.1);
+  background: rgba(86, 28, 36, 0.2);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -81,10 +82,10 @@
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange));
+  background: linear-gradient(90deg, var(--primary-dark), var(--secondary-dark), var(--tertiary-light));
   border-radius: 10px;
   transition: width 1s ease;
-  box-shadow: 0 0 10px var(--glow-orange);
+  box-shadow: 0 0 10px var(--glow-coffee);
   position: relative;
 }
 
@@ -95,7 +96,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 216, 196, 0.4), transparent);
   animation: shimmer 2s infinite;
 }
 
