@@ -14,7 +14,7 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+  background: linear-gradient(135deg, var(--tertiary-light), var(--accent-cream));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -38,21 +38,21 @@
   background: var(--card-bg);
   padding: 25px;
   border-radius: 15px;
-  border: 2px solid rgba(255, 107, 53, 0.1);
+  border: 2px solid rgba(86, 28, 36, 0.3);
   transition: all 0.3s ease;
   text-align: center;
 }
 
 .highlight-item:hover {
-  border-color: var(--primary-orange);
+  border-color: var(--primary-dark);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+  box-shadow: 0 10px 30px rgba(86, 28, 36, 0.3);
 }
 
 .highlight-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--primary-orange);
+  color: var(--tertiary-light);
   margin-bottom: 10px;
 }
 
@@ -69,8 +69,8 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  border: 3px solid var(--primary-orange);
-  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+  border: 3px solid var(--primary-dark);
+  box-shadow: 0 20px 60px rgba(86, 28, 36, 0.4);
 }
 
 .about-image-wrapper img {
